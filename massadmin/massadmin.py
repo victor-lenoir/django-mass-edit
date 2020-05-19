@@ -297,10 +297,13 @@ class MassAdmin(admin.ModelAdmin):
                                     formset,
                                     change=True)
 
+                            print(self.admin_obj)
+                            print(self.admin_obj.construct_change_message)
                             change_message = self.admin_obj.construct_change_message(
                                 request,
                                 form,
                                 formsets)
+                            print('tada:', change_message)
                             self.admin_obj.log_change(
                                 request,
                                 new_object,
