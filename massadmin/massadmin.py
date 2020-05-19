@@ -297,11 +297,11 @@ class MassAdmin(admin.ModelAdmin):
                                     formset,
                                     change=True)
 
-                            change_message = self.construct_change_message(
+                            change_message = self.admin_obj.construct_change_message(
                                 request,
                                 form,
                                 formsets)
-                            self.log_change(
+                            self.admin_obj.log_change(
                                 request,
                                 new_object,
                                 change_message)
